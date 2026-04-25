@@ -1,5 +1,7 @@
 # Raport360
 
+> 🚧 **Work in Progress** — projekt w aktywnej fazie budowy
+>
 > Wywiad gospodarczy AI — due diligence polskich firm w 30 sekund.
 
 ![Screenshot](./screenshot.png)
