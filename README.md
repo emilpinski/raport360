@@ -1,29 +1,63 @@
-# Raport360.pl — Polish Company Intelligence Portal
+# Raport360
 
-![Preview](screenshots/preview.png)
+> Wywiad gospodarczy AI — due diligence polskich firm w 30 sekund.
 
+![Screenshot](./screenshot.png)
 
-> Full financial and legal analysis for 700,000+ Polish companies.
+## Co to jest
 
-**Live:** [raport360.pl](https://raport360.pl) &nbsp;|&nbsp; **Status:** Work in progress
+Raport360 to platforma do weryfikacji i analizy polskich firm. Baza obejmuje prawie 700 000 spółek KRS i 683 000+ przedsiębiorców CEIDG. System generuje automatyczny rating A-E, Risk Score 0-100 oparty na 12 czynnikach oraz pełne due diligence z analizą finansową ze sprawozdań MF.
+
+Skierowana do prawników, doradców, firm leasingowych i każdego, kto potrzebuje szybkiej weryfikacji kontrahenta przed podpisaniem umowy lub udzieleniem finansowania.
+
+## Funkcje
+
+- **Risk Score AI** — ocena ryzyka 0-100 na podstawie: wieku firmy, kapitału, zmian zarządu, Altman Z-Score
+- **Rating A-E** — automatyczna klasyfikacja kondycji finansowej (A=bezpieczna, E=ryzykowna)
+- **Analiza finansowa** — przychody, zysk netto, bilans, wskaźniki z e-Sprawozdań Ministerstwa Finansów
+- **Zarząd i powiązania** — prokurenci, rada nadzorcza, historia zmian, relacje kapitałowe
+- **Weryfikacja kontrahenta** — status aktywności, NIP, REGON, KRS, dane identyfikacyjne
+- **Live Feed** — real-time feed nowych wpisów i zmian w KRS
+- **Ranking firm** — Top 30 i dynamiczne zestawienia branżowe
+- **Kalkulator wskaźników** — ROE, ROA, current ratio, quick ratio
+- **Bezpłatnie bez rejestracji** — podstawowe dane dostępne publicznie
+
+## Stack
+
+| Warstwa | Technologia |
+|---------|-------------|
+| Frontend | Next.js 15, React 19, TypeScript, Tailwind CSS v3 |
+| Backend | Next.js API Routes |
+| Baza danych | Supabase (PostgreSQL) |
+| Wykresy | Recharts |
+| Email | Resend |
+| Ikony | Lucide React |
+| Deploy | Vercel |
+
+## Uruchomienie
+
+```bash
+git clone https://github.com/emilpinski/raport360
+cd raport360
+npm install
+cp .env.example .env.local
+# Uzupelnij zmienne srodowiskowe
+npm run dev
+```
+
+## Zmienne środowiskowe
+
+| Zmienna | Opis | Wymagana |
+|---------|------|----------|
+| `NEXT_PUBLIC_SUPABASE_URL` | URL projektu Supabase | ✅ |
+| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Klucz publiczny Supabase | ✅ |
+| `SUPABASE_SERVICE_ROLE_KEY` | Klucz serwisowy (backend) | ✅ |
+| `RESEND_API_KEY` | Klucz API Resend (emaile) | ✅ |
+| `NEXT_PUBLIC_APP_URL` | Publiczny URL aplikacji | ✅ |
+
+## Status
+
+Demo — [raport360.vercel.app](https://raport360.vercel.app)
 
 ---
-
-## What it does
-
-- KRS registry data: board members, shareholders, PKD codes, registration history
-- Financial statements from eKRS filings: revenue, net profit, assets, equity
-- Risk rating A–E with Altman Z"-Score bankruptcy detection
-- 30+ red flag signals: VAT compliance, dormant status, virtual office patterns, board turnover
-- Interactive voivodeship heat map, company comparison, executive directory
-
-## How it works
-
-- **Multi-source pipeline**: Queries KRS API for company structure, VAT whitelist for tax status, and eKRS financial databases for historical statements — with Supabase cache populated by nightly scrapers when WAF blocks direct access
-- **Altman Z"-Score**: Implements the academic bankruptcy prediction model (6.56·X1 + 3.26·X2 + 6.72·X3 + 1.05·X4) combined with 30+ heuristic red flag penalties
-- **WAF bypass scraper**: Playwright with 20 parallel Chrome workers bypasses Incapsula WAF to extract financial XML/XHTML filings, processing ~14,000 companies/hour
-- **Risk zone classification**: Scores companies into BEZPIECZNA / SZARA / RYZYKO zones combining financial model + operational signals
-
-## Tech Stack
-
-![Next.js](https://img.shields.io/badge/Next.js_15-black?logo=next.js) ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white) ![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?logo=supabase&logoColor=white) ![Playwright](https://img.shields.io/badge/Playwright-2EAD33?logo=playwright&logoColor=white) ![Vercel](https://img.shields.io/badge/Vercel-black?logo=vercel)
+Built by [Emil Piński](https://emilpinski.pl)
