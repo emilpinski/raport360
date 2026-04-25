@@ -4,7 +4,7 @@
 
 > AI-powered business intelligence — due diligence on Polish companies in 30 seconds.
 
-![Screenshot](./screenshot.png)
+![Screenshot](https://raw.githubusercontent.com/emilpinski/raport360/main/docs/screenshots/Zrzut_ekranu_25-4-2026_123147_raport360.pl.jpeg)
 
 ## What is it
 
