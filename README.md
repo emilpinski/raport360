@@ -61,7 +61,5 @@ npm run dev
 
 Demo — [raport360.pl](https://raport360.pl)
 
-> This is a demo project. Production deployment is pending domain configuration.
-
 ---
 Built by [Emil Piński](https://emilpinski.pl)
