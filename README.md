@@ -1,5 +1,8 @@
 # Raport360.pl — Polish Company Intelligence Portal
 
+![Preview](screenshots/preview.png)
+
+
 > Full financial and legal analysis for 700,000+ Polish companies.
 
 **Live:** [raport360.pl](https://raport360.pl) &nbsp;|&nbsp; **Status:** Work in progress
