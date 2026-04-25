@@ -4,7 +4,7 @@
 
 > AI-powered business intelligence — due diligence on Polish companies in 30 seconds.
 
-![Screenshot](https://raw.githubusercontent.com/emilpinski/raport360/main/docs/screenshots/Zrzut_ekranu_25-4-2026_123147_raport360.pl.jpeg)
+![Screenshot](screenshot.png)
 
 ## What is it
 
@@ -66,5 +66,5 @@ Built by [Emil Piński](https://emilpinski.pl)
 
 ## Screenshots
 
-![Screenshot 1](docs/screenshots/Zrzut_ekranu_25-4-2026_123147_raport360.pl.jpeg)
-![Screenshot 2](docs/screenshots/Zrzut_ekranu_25-4-2026_131630_raport360.pl.jpeg)
+![Screenshot](screenshot.png)
+![Screenshot](screenshot.png)
