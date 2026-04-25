@@ -1,65 +1,67 @@
 # Raport360
 
-> 🚧 **Work in Progress** — projekt w aktywnej fazie budowy
->
-> Wywiad gospodarczy AI — due diligence polskich firm w 30 sekund.
+![Status](https://img.shields.io/badge/Status-Demo-blue)
+
+> AI-powered business intelligence — due diligence on Polish companies in 30 seconds.
 
 ![Screenshot](./screenshot.png)
 
-## Co to jest
+## What is it
 
-Raport360 to platforma do weryfikacji i analizy polskich firm. Baza obejmuje prawie 700 000 spółek KRS i 683 000+ przedsiębiorców CEIDG. System generuje automatyczny rating A-E, Risk Score 0-100 oparty na 12 czynnikach oraz pełne due diligence z analizą finansową ze sprawozdań MF.
+Raport360 is a platform for verifying and analyzing Polish companies. The database covers nearly 700,000 KRS companies and 683,000+ CEIDG sole traders. The system generates an automatic A-E rating, a Risk Score 0-100 based on 12 factors, and full due diligence with financial analysis from Ministry of Finance financial statements.
 
-Skierowana do prawników, doradców, firm leasingowych i każdego, kto potrzebuje szybkiej weryfikacji kontrahenta przed podpisaniem umowy lub udzieleniem finansowania.
+Built for lawyers, advisors, leasing companies, and anyone who needs quick contractor verification before signing a contract or providing financing.
 
-## Funkcje
+## Features
 
-- **Risk Score AI** — ocena ryzyka 0-100 na podstawie: wieku firmy, kapitału, zmian zarządu, Altman Z-Score
-- **Rating A-E** — automatyczna klasyfikacja kondycji finansowej (A=bezpieczna, E=ryzykowna)
-- **Analiza finansowa** — przychody, zysk netto, bilans, wskaźniki z e-Sprawozdań Ministerstwa Finansów
-- **Zarząd i powiązania** — prokurenci, rada nadzorcza, historia zmian, relacje kapitałowe
-- **Weryfikacja kontrahenta** — status aktywności, NIP, REGON, KRS, dane identyfikacyjne
-- **Live Feed** — real-time feed nowych wpisów i zmian w KRS
-- **Ranking firm** — Top 30 i dynamiczne zestawienia branżowe
-- **Kalkulator wskaźników** — ROE, ROA, current ratio, quick ratio
-- **Bezpłatnie bez rejestracji** — podstawowe dane dostępne publicznie
+- **AI Risk Score** — risk assessment 0-100 based on: company age, capital, management changes, Altman Z-Score
+- **A-E Rating** — automatic financial health classification (A=safe, E=risky)
+- **Financial analysis** — revenue, net profit, balance sheet, ratios from Ministry of Finance e-Reports
+- **Management and connections** — proxies, supervisory board, change history, capital relationships
+- **Contractor verification** — activity status, NIP, REGON, KRS, identification data
+- **Live Feed** — real-time feed of new entries and changes in KRS
+- **Company ranking** — Top 30 and dynamic industry rankings
+- **Ratio calculator** — ROE, ROA, current ratio, quick ratio
+- **Free without registration** — basic data available publicly
 
 ## Stack
 
-| Warstwa | Technologia |
-|---------|-------------|
+| Layer | Technology |
+|-------|-----------|
 | Frontend | Next.js 15, React 19, TypeScript, Tailwind CSS v3 |
 | Backend | Next.js API Routes |
-| Baza danych | Supabase (PostgreSQL) |
-| Wykresy | Recharts |
+| Database | Supabase (PostgreSQL) |
+| Charts | Recharts |
 | Email | Resend |
-| Ikony | Lucide React |
+| Icons | Lucide React |
 | Deploy | Vercel |
 
-## Uruchomienie
+## Getting Started
 
 ```bash
 git clone https://github.com/emilpinski/raport360
 cd raport360
 npm install
 cp .env.example .env.local
-# Uzupelnij zmienne srodowiskowe
+# Fill in environment variables
 npm run dev
 ```
 
-## Zmienne środowiskowe
+## Environment Variables
 
-| Zmienna | Opis | Wymagana |
-|---------|------|----------|
-| `NEXT_PUBLIC_SUPABASE_URL` | URL projektu Supabase | ✅ |
-| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Klucz publiczny Supabase | ✅ |
-| `SUPABASE_SERVICE_ROLE_KEY` | Klucz serwisowy (backend) | ✅ |
-| `RESEND_API_KEY` | Klucz API Resend (emaile) | ✅ |
-| `NEXT_PUBLIC_APP_URL` | Publiczny URL aplikacji | ✅ |
+| Variable | Description | Required |
+|----------|-------------|----------|
+| `NEXT_PUBLIC_SUPABASE_URL` | Supabase project URL | ✅ |
+| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Supabase public key | ✅ |
+| `SUPABASE_SERVICE_ROLE_KEY` | Supabase service key (backend) | ✅ |
+| `RESEND_API_KEY` | Resend API key (emails) | ✅ |
+| `NEXT_PUBLIC_APP_URL` | Public application URL | ✅ |
 
 ## Status
 
-Demo — [raport360.vercel.app](https://raport360.vercel.app)
+Demo — [raport360.pl](https://raport360.pl)
+
+> This is a demo project. Production deployment is pending domain configuration.
 
 ---
 Built by [Emil Piński](https://emilpinski.pl)
