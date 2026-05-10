@@ -20,6 +20,17 @@ Raport360 is a platform for verifying and analyzing Polish companies. The databa
 - **Ratio calculator** — ROE, ROA, current ratio, quick ratio
 - **Free without registration** — basic data available publicly
 
+## Use cases
+
+**Contractor verification before contract signing**
+A procurement team checks a new supplier before signing a 200k PLN contract. Raport360 surfaces: company age (3 years), management changes in the last 12 months (2 changes - flag), Altman Z-Score in distress zone, and one active enforcement entry in KRS. Decision: additional due diligence required.
+
+**Portfolio monitoring for a leasing company**
+A fleet leasing company monitors 340 corporate clients. Monthly automated checks flag 4 companies with Risk Score increases above 15 points. Two are in restructuring proceedings; two changed registered address to a known virtual-office address used by 80+ entities.
+
+**Investment screening**
+A private equity analyst shortlists 12 acquisition targets in the manufacturing sector. Raport360 filters to 4 with Risk Score below 30, positive Altman Z, and consistent revenue growth over 3 years of e-Reports.
+
 ## Stack
 
 | Layer | Technology |
@@ -31,6 +42,15 @@ Raport360 is a platform for verifying and analyzing Polish companies. The databa
 | Email | Resend |
 | Icons | Lucide React |
 | Deploy | Vercel |
+
+## Data sources and freshness
+
+| Source | Entities | Refresh frequency | Notes |
+|--------|----------|------------------|-------|
+| KRS (National Court Register) | ~700,000 companies | Weekly | Via official KRS API |
+| CEIDG (sole traders) | 683,000+ | Weekly | Via official CEIDG API |
+| MF e-Reports (financial statements) | ~400,000 with reports | On new filing | Ministry of Finance XML |
+| VAT Whitelist (Biala Lista) | All active VAT payers | Daily | Via wl-api.mf.gov.pl |
 
 ## Status
 
