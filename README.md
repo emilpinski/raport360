@@ -63,5 +63,5 @@ Built by [Emil Piński](https://emilpinski.pl)
 
 ## Screenshots
 
-![Company profile overview](docs/screenshots/Zrzut_ekranu_25-4-2026_123147_raport360.pl.jpeg)
-![Financial analysis view](docs/screenshots/Zrzut_ekranu_25-4-2026_131630_raport360.pl.jpeg)
+![Company profile overview](docs/screenshots/company-profile-overview.jpeg)
+![Financial analysis view](docs/screenshots/financial-analysis-view.jpeg)
