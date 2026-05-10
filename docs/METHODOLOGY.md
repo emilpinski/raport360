@@ -158,7 +158,9 @@ The Risk Score is bucketed into a letter rating:
 
 ## Altman Z'-Score Implementation
 
-Raport360 uses the Altman Z'-Score variant for private non-manufacturing firms (Altman, 1983/2000), since the majority of Polish SMEs in scope are non-manufacturing:
+Raport360 uses the Altman Z'-Score variant for private non-manufacturing firms, since the majority of Polish SMEs in scope are non-manufacturing. The coefficients are from Altman (2000), which revised the original 1983 private-firm model:
+
+> Altman, E.I. (2000). *Predicting Financial Distress of Companies: Revisiting the Z-Score and Zeta Models*. NYU Stern Working Paper. Available at: https://pages.stern.nyu.edu/~ealtman/Zscores.pdf
 
 ```
 Z' = 6.56 * X1 + 3.26 * X2 + 6.72 * X3 + 1.05 * X4
@@ -204,3 +206,10 @@ Until validation completes, Risk Score and Rating should be treated as a structu
 - Heuristic weights. Until backtested validation completes, weights are based on expert judgment and may be miscalibrated for specific industries or company sizes.
 
 Users are expected to read the per-factor breakdown alongside the headline score rather than relying on the rating alone.
+
+## References
+
+- Altman, E.I. (1983). *Corporate Financial Distress: A Complete Guide to Predicting, Avoiding, and Dealing with Bankruptcy*. New York: Wiley Interscience.
+- Altman, E.I. (2000). *Predicting Financial Distress of Companies: Revisiting the Z-Score and Zeta Models*. NYU Stern Working Paper. https://pages.stern.nyu.edu/~ealtman/Zscores.pdf
+- Maczynska, E. (1994). Ocena kondycji przedsiebiorstwa (z zastosowaniem uproszczonych metod analizy). *Zycie Gospodarcze*, 38. [Polish Z-Score adaptation widely cited in Polish insolvency literature]
+- Hadasik, D. (1998). Upadlosc przedsiebiorstw w Polsce i metody jej prognozowania. Poznan: Akademia Ekonomiczna. [Polish-calibrated discriminant model based on Warsaw Stock Exchange data]
